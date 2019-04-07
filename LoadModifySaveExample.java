@@ -82,14 +82,18 @@ public class LoadModifySaveExample {
 
 		AmaltheaWriter.writeToFile(model, outputFile);
 		
+		//*****Software Model*****
 		System.out.println();
-		nameNumberSplit("org.eclipse.app4mc.amalthea.model.impl.TagImpl@", ModelUtil.getOrCreateCommonElements(model).getTags().toString(), "Tags"); //perform nameNumberSplit on type tags to ensure tag was actually modified
+		nameNumberSplit("org.eclipse.app4mc.amalthea.model.impl.TagImpl@", ModelUtil.getOrCreateCommonElements(model).getTags().toString(), "Tags"); //perform nameNumberSplit on software type tags to ensure tag was actually modified
 		System.out.println();
-		nameNumberSplit("org.eclipse.app4mc.amalthea.model.impl.TaskImpl@", ModelUtil.getOrCreateSwModel(model).getTasks().toString(), "Tasks");//perform nameNumberSplit on type tasks
+		nameNumberSplit("org.eclipse.app4mc.amalthea.model.impl.TaskImpl@", ModelUtil.getOrCreateSwModel(model).getTasks().toString(), "Tasks");//perform nameNumberSplit on software type tasks
 		System.out.println();
-		nameNumberSplit("org.eclipse.app4mc.amalthea.model.impl.RunnableImpl@", ModelUtil.getOrCreateSwModel(model).getRunnables().toString(), "Runnables");//perform nameNumberSplit on type runnables
+		nameNumberSplit("org.eclipse.app4mc.amalthea.model.impl.RunnableImpl@", ModelUtil.getOrCreateSwModel(model).getRunnables().toString(), "Runnables");//perform nameNumberSplit on software type runnables
 		System.out.println();
-		nameNumberSplit("org.eclipse.app4mc.amalthea.model.impl.LabelImpl@", ModelUtil.getOrCreateSwModel(model).getLabels().toString(), "Labels");//perform nameNumberSplit on type labels
+		nameNumberSplit("org.eclipse.app4mc.amalthea.model.impl.LabelImpl@", ModelUtil.getOrCreateSwModel(model).getLabels().toString(), "Labels");//perform nameNumberSplit on software type labels
+		//*****Hardware Model*****
+		System.out.println();
+		nameNumberSplit("org.eclipse.app4mc.amalthea.model.impl.ProcessingUnitDefinitionImpl@", ModelUtil.getOrCreateHwModel(model).getDefinitions().toString(), "Processors");//perform nameNumberSplit on hardware type processor
 	}
 
 }
